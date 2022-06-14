@@ -1,7 +1,5 @@
-const Joke = ({ joke}) => {
-    return (
-        <p>{joke}</p>
-    )
-}
+const Joke = ({ joke }) => {
+  return <p>{joke}</p>;
+};
 
-export default Joke
+export default Joke;

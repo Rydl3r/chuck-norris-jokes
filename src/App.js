@@ -1,14 +1,14 @@
-import { useState } from 'react'
-import Joke from './joke';
+import { useState } from "react";
+import Joke from "./joke";
 
 function App() {
-  const [jokeContent, setJokeContent] = useState("")
+  const [jokeContent, setJokeContent] = useState("");
 
   const fetchJoke = async () => {
-    let response = await fetch("https://api.chucknorris.io/jokes/random")
-    let data = await response.json()
-    setJokeContent(data.value)
-  }
+    let response = await fetch("https://api.chucknorris.io/jokes/random");
+    let data = await response.json();
+    setJokeContent(data.value);
+  };
 
   return (
     <div className="App">
@@ -18,7 +18,9 @@ function App() {
           <h2>Generator</h2>
         </div>
         <div className="btn-group">
-          <button id="get-joke-btn" onClick={fetchJoke}>Get New Joke</button>
+          <button id="get-joke-btn" onClick={fetchJoke}>
+            Get New Joke
+          </button>
         </div>
         <div className="container">
           <Joke joke={jokeContent} />
